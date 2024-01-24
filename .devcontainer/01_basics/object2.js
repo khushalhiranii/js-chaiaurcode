@@ -62,12 +62,19 @@ const course = {
     price: "999",
     courseInstructor: "xyz"
 }
+// de-structuring
+const {courseInstructor} = course // iski vajah se course.courseInstructor itne bade naam ko call nhi karna padega
+console.log(courseInstructor);
 
-const {courseInstructor: instructor} = course
-
+const {courseInstructor: instructor} = course // ab sirf instructor daalne se hi course.courseInstructor vala kaam hojayega
 console.log(instructor);
 
-
+// json formaat
+// {
+//     "name": "hitesh",
+//     "coursename": "Javascript",
+//     "price": free
+// }
 
 
 
