@@ -1,3 +1,5 @@
+// project link - https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html
+
 const clock = document.getElementById('clock');
 
 setInterval(function(){let date = new Date();

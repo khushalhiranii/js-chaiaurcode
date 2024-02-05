@@ -1,3 +1,5 @@
+// project link - https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html
+
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 

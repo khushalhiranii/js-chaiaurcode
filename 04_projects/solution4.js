@@ -1,3 +1,6 @@
+// project link - https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html
+
+
 let number = parseInt(Math.random().toFixed(2) * 100 + 1);
 const submit = document.querySelector('#subt');
 

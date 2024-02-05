@@ -1,3 +1,5 @@
+// project link - https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(e){
