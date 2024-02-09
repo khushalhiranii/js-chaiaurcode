@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cadetblue;">
+    <div id="data">
+        <div style="width: 450px;
+        height: 500px;
+        border: 5px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1.1); background-color: rgb(242, 132, 132);">
+            <div id="01"></div>
+            <div id="11" style="display:flex; justify-content: center;"></div>
+        </div>
+    </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    // console.log(xhr.readyState);
+    xhr.open('GET', requestUrl)
+    // console.log(xhr.readyState);
+    xhr.onreadystatechange = function(){
+        // console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText); //string file to object
+            const followers = data.followers;
+            const avatarUrl = data.avatar_url;
+            const avatarImg = document.createElement('img')
+            avatarImg.src = avatarUrl;
+            avatarImg.alt = `Hitesh's Profile Picture`
+            document.getElementById('01').appendChild(avatarImg);
+            document.getElementById('11').innerHTML=`Followers = ${followers}`;
+            const img1 = document.getElementsByTagName('img');
+            console.log(img1.length);
+        }
+    }
+    xhr.send();
+</script>
+</html>
